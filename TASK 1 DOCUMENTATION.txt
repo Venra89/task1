@@ -1,0 +1,49 @@
+*This were the following steps that used to implement this task*
+Step 1: 
+Creating a new Spring Boot project IDE.
+Spring Boot is a framework that simplifies the creation of Spring-based applications. You can use the Spring Initializr to create a new project or create one manually. In this step, we'll create a new Spring Boot project in IDE.
+
+Step 2: Add the required dependencies like Maven pom.xml file.
+In this step, adding the required dependencies like Maven pom.xml file. These dependencies are required for building a REST API with Spring Boot, MongoDB, and Maven. The dependencies that were needed for the given task
+
+Spring Boot Web: 
+Which provides support for building web applications using Spring MVC.
+
+Spring Boot Data MongoDB: 
+This provides support for MongoDB database access using Spring Data MongoDB.
+
+MongoDB Java Driver: 
+This provides support for connecting to MongoDB using Java.
+
+Step 3: Configure your MongoDB connection details in the application.properties file.
+In this step, we'll be configuring MongoDB connection details in the application.properties file. Spring Boot will automatically use these properties to connect to your MongoDB instance. Properties we will be needed to configure are:
+
+spring.data.mongodb.host: The hostname or IP address of your MongoDB instance.
+spring.data.mongodb.port: The port number that your MongoDB instance is running on.
+spring.data.mongodb.database: The name of the MongoDB database that you want to use.
+
+Step 4: Create a Server class that represents a server object.
+In this step, we'll be create a Java class that represents a server object. This class will have four fields: id, name, language, and framework as per given in the task. we'll be using this class to create, retrieve, and delete server objects in your REST API.
+
+Step 5: Create a ServerRepository interface that extends MongoRepository.
+In this step, we'll be create a Spring Data MongoDB repository interface that extends the MongoRepository interface. This interface will provide CRUD (Create, Read, Update, Delete) operations for your Server class.
+
+Step 6: Create a ServerController class that provides the REST API endpoints.
+In this step, you'll create a Spring MVC controller class that provides the REST API endpoints for your Server class. This class will have four methods that handle HTTP requests for creating, retrieving, updating, and deleting server objects.
+
+Step 7: Run the application and test the endpoints using Postman, curl, or any other HTTP client.
+In this step, we'll be runing Spring Boot application and test the REST API endpoints using Postman, curl, or any other HTTP client. You'll use the HTTP methods GET, PUT, and DELETE to create, retrieve, and delete server objects, respectively.
+
+POST all servers: GET http://localhost:8080/server
+JSON code
+{
+  "name": "my centos",
+  "id": "123",
+  "language": "java",
+  "framework": "django"
+}
+
+GET all servers: GET http://localhost:8080/server
+PUT a new server: PUT http://localhost:8080/server/my
+DELETE a server by id: DELETE http://localhost:8080/servers/123
+
